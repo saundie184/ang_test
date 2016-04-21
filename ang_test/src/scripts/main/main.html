@@ -1,0 +1,21 @@
+<div ng-controller="mainController" class="main" style="padding: 24px;">
+    
+    <div style="width: 500px;" class="bubbles">
+        <slider min="0" max="100" step="10" label-function="slider_label" ng-model="slider_value"></slider>
+    </div>
+    
+    <div class="bubbles" style="width: 200px;margin-top: 18px;">
+        <spinner min="sp_min" max="sp_max" step="1" show-buttons="true" value="spinner_value" enable="sp_enable"></spinner>
+        <div class="btn btn-primary" style="margin-top: 8px;" ng-click="changeSpinnerEnablement()">
+            Toggle Enablement
+        </div>
+    </div>
+    
+    <div class="bubbles" style="width: 620px;margin-top: 18px;padding-bottom: 24px;">
+        <status-timeline ng-model="status_data" domain="status_domain" range="status_range" divisions="24" right-label="{{ 'common.l_now' | translate }}" left-label="{{ 'common.l_24_hours_ago' | translate }}" icon-class="icon-firebreak" date-range="status_date_range"></status-timeline>
+    </div>
+    
+    <div class="bubbles" style="width: 80px;margin-top: 18px;">
+        <switch ng-model="switch_value" on-text="明" off-text="消"></switch>
+    </div>
+</div>
